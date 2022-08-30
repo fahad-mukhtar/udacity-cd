@@ -1,6 +1,4 @@
---- 
-? "-task"
-: AzureWebApp@1
+ 
 pool: myAgentPool
 steps: 
   - 
