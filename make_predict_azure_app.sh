@@ -46,5 +46,5 @@ curl -d '{
    }
 }'\
      -H "Content-Type: application/json" \
-     -X POST https://web-udacity-devops-flask.azurewebsites.net:$PORT/predict
+     -X POST https://flask-udacity.azurewebsites.net:$PORT/predict
      #your application name <yourappname>goes here
