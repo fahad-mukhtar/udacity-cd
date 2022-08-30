@@ -6,6 +6,14 @@
     appName: 'flask-udacity'
     package: '$(System.DefaultWorkingDirectory)/**/*.zip'
     runtimeStack: 'PYTHON|3.7'
+    startUpCommand: 'python app.py'
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'myServiceConnection'
+    appType: 'webAppLinux'
+    appName: 'flask-udacity'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    runtimeStack: 'PYTHON|3.7'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -13,7 +21,7 @@
 trigger:
 - main
 
-pool:
+pool: myAgentPool
   vmImage: ubuntu-latest
 
 steps:
